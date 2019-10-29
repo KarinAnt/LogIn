@@ -1,0 +1,7 @@
+<form action="" [formGroup]="myform">
+    <input  type="text" placeholder="UserName" formControlName="userName" (keyup)='errorsName()' [ngClass]="{'errors':errorName}">
+    <div>{{errorName}}</div>
+    <input  type="text" placeholder="Password" formControlName="password" (keyup)='errorsPassword()' [ngClass]="{'errors':errorPassword}">
+    <div>{{errorPassword}}</div>
+    <button (click)='logIn()'>Submit</button>
+</form>
